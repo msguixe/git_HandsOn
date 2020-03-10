@@ -1,4 +1,7 @@
+
 #!/bin/bash
+#This script identifies DNA and RNA sequences
+
 seq=$1
 seq=$(echo $seq | tr a-z A-Z)  # Note we just added this line
 if [[ $seq =~ ^[ACGTU]+$ ]]; then
