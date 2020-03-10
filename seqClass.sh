@@ -18,6 +18,6 @@ if [[ -n $motif ]]; then
   if [[ $seq =~ $motif ]]; then
     echo "FOUND_modified"
   else
-    echo "NOT FOUND"
+    echo "NOT FOUND_modified"
   fi
 fi
