@@ -1,4 +1,5 @@
 #!/bin/bash
+# This first part of the script identifies the introduced sequence as DNA or RNA sequences
 seq=$1
 seq=$(echo $seq | tr a-z A-Z)  # Note we just added this line
 if [[ $seq =~ ^[ACGTU]+$ ]]; then
@@ -12,6 +13,8 @@ if [[ $seq =~ ^[ACGTU]+$ ]]; then
 else
   echo "The sequence is not DNA nor RNA"
 fi
+
+#This second part finds a motifof interest in the introduced sequence
 motif=$(echo $2 | tr a-z A-Z)
 if [[ -n $motif ]]; then
   echo -en "Motif search enabled: looking for motif '$motif' in sequence '$seq'... "
